@@ -41,6 +41,7 @@ int test_va(const char *str, ...)
 int main(void)
 {
     char    c;
+    int     l;
 
     c = '1';
     write(1, &c, 1);
@@ -50,6 +51,7 @@ int main(void)
 
     printf("\n%dd", 10, 10);
 
-    ft_printf("\nsalut toi");
+    l = ft_printf("\nsalut toi %s", "\noui et toi");
+    printf("\n%d", l);
     return (0);
 }

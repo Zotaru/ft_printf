@@ -6,6 +6,63 @@ int ft_putchar(char c)
     return (1);
 }
 
+int ft_putstr(char *str)
+{
+    int length;
+
+    length = 0;
+    while (str[length])
+    {
+        write(1, &str[length], 1);
+        length++;
+    }
+    return (length);
+}
+
+int ft_conversion(va_list ptr, char c)
+{
+    int length;
+
+    length = 0;
+    if (c == 'c')
+    {
+        length += ft_putchar((char) va_arg(ptr, int));
+    }
+    else if (c == 's')
+    {
+        length += ft_putstr(va_arg(ptr, char *));
+    }
+    else if (c == 'p')
+    {
+
+    }
+    else if (c == 'd')
+    {
+
+    }
+    else if (c == 'i')
+    {
+
+    }
+    else if (c == 'u')
+    {
+
+    }
+    else if (c == 'x')
+    {
+
+    }
+    else if (c == 'X')
+    {
+
+    }
+    else if (c == '%')
+    {
+
+    }
+    return (length);
+}
+
 int ft_printf(const char *str, ...)
 {
     va_list ptr;
@@ -19,7 +76,7 @@ int ft_printf(const char *str, ...)
     {
         if (str[i] == '%')
         {
-            //fonction gerant tous les cas 
+            length += ft_conversion(ptr, str[i + 1]);
             i += 2;
         }
         else
