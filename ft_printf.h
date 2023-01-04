@@ -6,4 +6,7 @@
 # include <stdarg.h>
 # include "unistd.h"
 
+int ft_printf(const char *str, ...);
+int ft_putchar(char c);
+
 #endif

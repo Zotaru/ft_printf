@@ -49,5 +49,7 @@ int main(void)
     test_va("ceci est un test:", "test1", "test2", "test3");
 
     printf("\n%dd", 10, 10);
+
+    ft_printf("\nsalut toi");
     return (0);
 }
