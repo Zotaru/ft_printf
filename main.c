@@ -43,15 +43,35 @@ int main(void)
     char    c;
     int     l;
 
+
     c = '1';
     write(1, &c, 1);
     printf("\naddition basique %d", AddNumbers(2, 4, 5));
     printf("\n");
     test_va("ceci est un test:", "test1", "test2", "test3");
 
-    printf("\n%dd", 10, 10);
+    printf("\n%dd", 10);
 
     l = ft_printf("\nsalut toi %s", "\noui et toi");
-    printf("\n%d", l);
+    printf("\n%d\n", l);
+    printf("%p", &l);
+    printf("\n");
+    int *pointeur;
+
+    pointeur = &l;
+    printf("%p\n", pointeur);
+	
+	printf("%d\n", 15);
+
+
+	l = ft_putnbr_base("0123456789", 1000);
+	printf("\n%d", l);
+
+	printf("\n");
+
+	printf("%x\n", -100);
+	l = ft_putnbr_base(HEXA_MIN, -100);
+	printf("\n%d", l);
+
     return (0);
 }
