@@ -6,7 +6,7 @@
 /*   By: amonier <amonier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:43:14 by amonier           #+#    #+#             */
-/*   Updated: 2023/01/11 23:07:56 by amonier          ###   ########.fr       */
+/*   Updated: 2023/01/12 01:22:09 by amonier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 # include <stdarg.h>
 # include <unistd.h>
 
-# define HEXA_MIN "0123456789abcdef"
-# define HEXA_MAJ "0123456789ABCDEF"
+# define HEXA "0123456789abcdef0123456789ABCDEF"
+//# define HEXA_MAJ "0123456789ABCDEF"
+# define BASE_10 "0123456789"
 
 int	ft_strlen(char *str);
-int	ft_putnbr_base(char *base, int para);
+unsigned int	ft_putnbr_base(unsigned int n, int c, int *length);
+// int	ft_putnbr_base(char *base, int para);
 
 int ft_printf(const char *str, ...);
 int ft_putchar(char c);

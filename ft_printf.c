@@ -6,7 +6,7 @@
 /*   By: amonier <amonier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:42:29 by amonier           #+#    #+#             */
-/*   Updated: 2023/01/06 18:42:30 by amonier          ###   ########.fr       */
+/*   Updated: 2023/01/12 01:15:23 by amonier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int ft_conversion(va_list ptr, char c)
     }
     else if (c == 'd')
     {
-
+		// length += ft_putnbr_base(BASE_10, va_arg(ptr, int));
     }
     else if (c == 'i')
     {
@@ -60,14 +60,8 @@ int ft_conversion(va_list ptr, char c)
     {
 
     }
-    else if (c == 'x')
-    {
-
-    }
-    else if (c == 'X')
-    {
-
-    }
+    else if (c == 'x' || c == 'X')
+        ft_putnbr_base(va_arg(ptr, unsigned int), (c == 'X'), &length);
     else if (c == '%')
     {
 

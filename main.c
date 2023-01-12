@@ -42,36 +42,44 @@ int main(void)
 {
     char    c;
     int     l;
-
+	int		test;
 
     c = '1';
-    write(1, &c, 1);
-    printf("\naddition basique %d", AddNumbers(2, 4, 5));
-    printf("\n");
-    test_va("ceci est un test:", "test1", "test2", "test3");
+//    write(1, &c, 1);
+//    printf("\naddition basique %d", AddNumbers(2, 4, 5));
+//    printf("\n");
+//    test_va("ceci est un test:", "test1", "test2", "test3");
 
-    printf("\n%dd", 10);
+//    printf("\n%dd", 10);
 
-    l = ft_printf("\nsalut toi %s", "\noui et toi");
-    printf("\n%d\n", l);
-    printf("%p", &l);
-    printf("\n");
-    int *pointeur;
+//    l = ft_printf("\nsalut toi %s", "\noui et toi");
+//    printf("\n%d\n", l);
+//    printf("%p", &l);
+//    printf("\n");
+//    int *pointeur;
 
-    pointeur = &l;
-    printf("%p\n", pointeur);
+//    pointeur = &l;
+//    printf("%p\n", pointeur);
 	
-	printf("%d\n", 15);
+//	printf("%d\n", 15);
 
 
-	l = ft_putnbr_base("0123456789", 1000);
-	printf("\n%d", l);
+//	l = ft_putnbr_base("0123456789", 1000);
+//	printf("\n%d", l);
 
-	printf("\n");
-
-	printf("%x\n", -100);
-	l = ft_putnbr_base(HEXA_MIN, -100);
-	printf("\n%d", l);
-
+//	printf("\n");
+	test = -100;
+	// l = ft_putnbr_base(HEXA_MIN, test);
+	// printf("\n ceci est la longueur: %d", l);
+	printf("%i|",printf("ceci est son printf %x\n", 100));
+	printf("%i|",printf("ceci est son printf %x\n", 15));
+	printf("%i|",printf("ceci est son printf %x\n", 95));
+	printf("%i|",printf("ceci est son printf %x\n", 98));
+	printf("%i|",printf("ceci est son printf %x\n", 98352));
+	printf("%i|",ft_printf("\nceci est mon printf %x", 100));
+	printf("%i|",ft_printf("\nceci est mon printf %x", 15));
+	printf("%i|",ft_printf("\nceci est mon printf %x", 95));
+	printf("%i|",ft_printf("\nceci est mon printf %x", 98));
+	printf("%i|",ft_printf("\nceci est mon printf %x", 98352));
     return (0);
 }
