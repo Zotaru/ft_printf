@@ -51,20 +51,22 @@ int ft_conversion(va_list ptr, char c)
     else if (c == 'd')
     {
 		// length += ft_putnbr_base(BASE_10, va_arg(ptr, int));
+        ft_putnbr(va_arg(ptr, int), &length);
     }
     else if (c == 'i')
     {
-
+        ft_putnbr(va_arg(ptr, int), &length);
     }
     else if (c == 'u')
     {
-
+        ft_putnbr(va_arg(ptr, unsigned int), &length); 
+        // ca gere les negatif go voir avec les testeurs
     }
     else if (c == 'x' || c == 'X')
         ft_putnbr_base(va_arg(ptr, unsigned int), (c == 'X'), &length);
     else if (c == '%')
     {
-
+        length += ft_putchar('%');
     }
     return (length);
 }

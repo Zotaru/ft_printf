@@ -71,6 +71,8 @@ int main(void)
 	test = -100;
 	// l = ft_putnbr_base(HEXA_MIN, test);
 	// printf("\n ceci est la longueur: %d", l);
+
+    /*
 	printf("%i|",printf("ceci est son printf %x\n", 100));
 	printf("%i|",printf("ceci est son printf %x\n", 15));
 	printf("%i|",printf("ceci est son printf %x\n", 95));
@@ -81,5 +83,24 @@ int main(void)
 	printf("%i|",ft_printf("\nceci est mon printf %x", 95));
 	printf("%i|",ft_printf("\nceci est mon printf %x", 98));
 	printf("%i|",ft_printf("\nceci est mon printf %x", 98352));
+    */
+
+    ft_printf("test1:%d\n", test);
+    ft_printf("test2:%d\n", 100);
+    ft_printf("test3:%%\n");
+    ft_printf("test4:%u\n", 100);
+    ft_printf("test5:%u\n", -100);
+    ft_printf("test6:%i\n", 100);
+    ft_printf("test7:%i\n", -100);
+    printf("\n");
+    printf("test1:%d\n", test);
+    printf("test2:%d\n", 100);
+    printf("test3:%%\n");
+    printf("test4:%u\n", 100);
+    printf("test5:%u\n", -100);
+    printf("test6:%i\n", 100);
+    printf("test7:%i\n", -100);
+    
+    
     return (0);
 }

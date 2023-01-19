@@ -26,6 +26,8 @@ int	ft_strlen(char *str);
 unsigned int	ft_putnbr_base(unsigned int n, int c, int *length);
 // int	ft_putnbr_base(char *base, int para);
 
+int ft_putnbr(int n, int *length);
+
 int ft_printf(const char *str, ...);
 int ft_putchar(char c);
 int ft_conversion(va_list ptr, char c);
