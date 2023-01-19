@@ -92,6 +92,8 @@ int main(void)
     ft_printf("test5:%u\n", -100);
     ft_printf("test6:%i\n", 100);
     ft_printf("test7:%i\n", -100);
+    ft_printf("test8:%p\n", &c);
+    ft_printf("test9:%p\n", &test);
     printf("\n");
     printf("test1:%d\n", test);
     printf("test2:%d\n", 100);
@@ -100,6 +102,8 @@ int main(void)
     printf("test5:%u\n", -100);
     printf("test6:%i\n", 100);
     printf("test7:%i\n", -100);
+    printf("test8:%p\n", &c);
+    printf("test9:%p\n", &test);
     
     
     return (0);

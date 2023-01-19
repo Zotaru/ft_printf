@@ -46,7 +46,7 @@ int ft_conversion(va_list ptr, char c)
     }
     else if (c == 'p')
     {
-
+        length += ft_print_ptr(va_arg(ptr, unsigned long long));
     }
     else if (c == 'd')
     {
