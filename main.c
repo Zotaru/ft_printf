@@ -85,6 +85,7 @@ int main(void)
 	printf("%i|",ft_printf("\nceci est mon printf %x", 98352));
     */
 
+    /*
     ft_printf("test1:%d\n", test);
     ft_printf("test2:%d\n", 100);
     ft_printf("test3:%%\n");
@@ -104,7 +105,11 @@ int main(void)
     printf("test7:%i\n", -100);
     printf("test8:%p\n", &c);
     printf("test9:%p\n", &test);
-    
+    */
+
+    ft_printf(" | %u", ft_printf("%s", NULL));
+    //printf("\n");
+    //printf(" | %u", printf("%s", NULL));
     
     return (0);
 }

@@ -31,6 +31,8 @@ int ft_putnbr(int n, int *length);
 int ft_print_ptr(unsigned long long ptr);
 int ft_putnbr_base_ptr(unsigned long long ptr, int *length);
 
+int ft_putnbr_u(unsigned int n, int *length);
+
 int ft_printf(const char *str, ...);
 int ft_putchar(char c);
 int ft_conversion(va_list ptr, char c);

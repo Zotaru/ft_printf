@@ -23,10 +23,17 @@ int ft_putstr(char *str)
     int length;
 
     length = 0;
-    while (str[length])
+    if (str == NULL)
     {
-        write(1, &str[length], 1);
-        length++;
+        length += ft_putstr("(null)");
+    }
+    else
+    {
+        while (str[length])
+        {
+            write(1, &str[length], 1);
+            length++;
+        }
     }
     return (length);
 }
@@ -37,37 +44,23 @@ int ft_conversion(va_list ptr, char c)
 
     length = 0;
     if (c == 'c')
-    {
         length += ft_putchar((char) va_arg(ptr, int));
-    }
     else if (c == 's')
-    {
         length += ft_putstr(va_arg(ptr, char *));
-    }
     else if (c == 'p')
-    {
         length += ft_print_ptr(va_arg(ptr, unsigned long long));
-    }
     else if (c == 'd')
-    {
-		// length += ft_putnbr_base(BASE_10, va_arg(ptr, int));
         ft_putnbr(va_arg(ptr, int), &length);
-    }
+	// length += ft_putnbr_base(BASE_10, va_arg(ptr, int));
     else if (c == 'i')
-    {
         ft_putnbr(va_arg(ptr, int), &length);
-    }
     else if (c == 'u')
-    {
-        ft_putnbr(va_arg(ptr, unsigned int), &length); 
-        // ca gere les negatif go voir avec les testeurs
-    }
+        ft_putnbr_u(va_arg(ptr, unsigned int), &length); 
+    // ca gere les negatif go voir avec les testeurs
     else if (c == 'x' || c == 'X')
         ft_putnbr_base(va_arg(ptr, unsigned int), (c == 'X'), &length);
     else if (c == '%')
-    {
         length += ft_putchar('%');
-    }
     return (length);
 }
 
