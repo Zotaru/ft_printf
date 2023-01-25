@@ -43,7 +43,8 @@ int main(void)
     char    c;
     int     l;
 	int		test;
-
+	
+	ft_printf(NULL);
     c = '1';
 //    write(1, &c, 1);
 //    printf("\naddition basique %d", AddNumbers(2, 4, 5));
@@ -107,7 +108,7 @@ int main(void)
     printf("test9:%p\n", &test);
     */
 
-    ft_printf(" | %u", ft_printf("%s", NULL));
+    //ft_printf(" | %u", ft_printf("%s", NULL));
     //printf("\n");
     //printf(" | %u", printf("%s", NULL));
     

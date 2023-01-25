@@ -6,7 +6,7 @@
 /*   By: amonier <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/25 22:14:15 by amonier           #+#    #+#             */
-/*   Updated: 2023/01/25 22:29:53 by amonier          ###   ########.fr       */
+/*   Updated: 2023/01/25 22:53:11 by amonier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@ int	ft_print_ptr(unsigned long long ptr)
 {
 	int	length;
 
-	length = ft_putstr("0x");
 	if (ptr == 0)
-		length += ft_putchar('0');
-	else
 	{
-		ft_putnbr_base_ptr(ptr, &length);
+		length = ft_putstr("(nil)");
+		return (length);
 	}
+	length = ft_putstr("0x");
+	ft_putnbr_base_ptr(ptr, &length);
 	return (length);
 }

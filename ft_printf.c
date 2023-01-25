@@ -6,7 +6,7 @@
 /*   By: amonier <amonier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:42:29 by amonier           #+#    #+#             */
-/*   Updated: 2023/01/25 22:23:39 by amonier          ###   ########.fr       */
+/*   Updated: 2023/01/25 23:04:00 by amonier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int	ft_printf(const char *str, ...)
 
 	i = 0;
 	length = 0;
+	if (str == NULL)
+		return (0);
 	va_start(ptr, str);
 	while (str[i])
 	{
