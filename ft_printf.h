@@ -6,7 +6,7 @@
 /*   By: amonier <amonier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:43:14 by amonier           #+#    #+#             */
-/*   Updated: 2023/01/12 01:22:09 by amonier          ###   ########.fr       */
+/*   Updated: 2023/01/25 22:26:59 by amonier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,21 @@
 # include <unistd.h>
 
 # define HEXA "0123456789abcdef0123456789ABCDEF"
-//# define HEXA_MAJ "0123456789ABCDEF"
 # define BASE_10 "0123456789"
 
-int	ft_strlen(char *str);
+int				ft_strlen(char *str);
 unsigned int	ft_putnbr_base(unsigned int n, int c, int *length);
-// int	ft_putnbr_base(char *base, int para);
 
-int ft_putnbr(int n, int *length);
+int				ft_putnbr(int n, int *length);
 
-int ft_print_ptr(unsigned long long ptr);
-int ft_putnbr_base_ptr(unsigned long long ptr, int *length);
+int				ft_print_ptr(unsigned long long ptr);
+int				ft_putnbr_base_ptr(unsigned long long ptr, int *length);
 
-int ft_putnbr_u(unsigned int n, int *length);
+int				ft_putnbr_u(unsigned int n, int *length);
 
-int ft_printf(const char *str, ...);
-int ft_putchar(char c);
-int ft_conversion(va_list ptr, char c);
-int ft_putstr(char *str);
+int				ft_printf(const char *str, ...);
+int				ft_putchar(char c);
+int				ft_conversion(va_list ptr, char c);
+int				ft_putstr(char *str);
 
 #endif
